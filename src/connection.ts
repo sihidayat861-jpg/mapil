@@ -4,6 +4,7 @@ export const pool = mysql.createPool({
   host: 'localhost',
   user: 'root',
   password: '@Robloxindonesia17',            
-  database: 'db_blog_app',  
+  database: 'db_tiket',
+  dateStrings: true  
 });
 export default pool;

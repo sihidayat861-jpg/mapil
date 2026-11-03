@@ -1,0 +1,283 @@
+.wrap {
+  min-height: calc(100vh - 80px);
+  padding: 32px 16px 60px;
+  background: linear-gradient(135deg, #eef2ff 0%, #f5f3ff 50%, #fdf2f8 100%);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 28px;
+  padding: 44px 40px;
+  border-radius: 20px;
+  background-color: green;
+  box-shadow: 0 20px 50px rgba(0, 128, 0, 0.25);
+  color: #fff;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.heroTitle {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.heroText {
+  margin: 10px 0 0;
+  font-size: 16px;
+  color: #e0e7ff;
+}
+
+.bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tab {
+  padding: 9px 18px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 999px;
+  background: #fff;
+  color: #334155;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.tab:hover {
+  border-color: #4f46e5;
+  color: #4f46e5;
+}
+
+.tabActive {
+  border-color: transparent;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: #fff;
+}
+
+.tabActive:hover {
+  color: #fff;
+}
+
+.count {
+  font-size: 14px;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-left: 5px solid #f59e0b;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(79, 70, 229, 0.1);
+}
+
+.cardPending {
+  border-left-color: #f59e0b;
+}
+
+.cardLunas {
+  border-left-color: #10b981;
+}
+
+.cardBatal {
+  border-left-color: #cbd5e1;
+  opacity: 0.75;
+}
+
+.body {
+  flex: 1;
+  min-width: 220px;
+  padding: 18px 22px;
+}
+
+.name {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.meta {
+  margin: 2px 0;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.sum {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #334155;
+}
+
+.sum b {
+  font-size: 20px;
+  font-weight: 800;
+  color: #4f46e5;
+}
+
+.date {
+  margin: 6px 0 0;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 22px;
+}
+
+.badge {
+  padding: 5px 13px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.pending {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.lunas {
+  background: #d1fae5;
+  color: #047857;
+}
+
+.batal {
+  background: #e2e8f0;
+  color: #64748b;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.confirm,
+.cancel {
+  padding: 9px 16px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: transform 0.1s, opacity 0.15s;
+}
+
+.confirm {
+  border: none;
+  background: linear-gradient(135deg, #059669, #10b981);
+  color: #fff;
+}
+
+.cancel {
+  border: 1px solid #fecaca;
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.confirm:hover:not(:disabled),
+.cancel:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.confirm:disabled,
+.cancel:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error {
+  margin-bottom: 16px;
+  padding: 10px 14px;
+  border: 1px solid #fecaca;
+  border-radius: 10px;
+  background: #fef2f2;
+  font-size: 14px;
+  color: #dc2626;
+}
+
+.success {
+  margin-bottom: 16px;
+  padding: 10px 14px;
+  border: 1px solid #a7f3d0;
+  border-radius: 10px;
+  background: #ecfdf5;
+  font-size: 14px;
+  color: #047857;
+}
+
+.empty {
+  padding: 48px 20px;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  background: #fff;
+  text-align: center;
+  color: #64748b;
+}
+
+.loading {
+  padding: 60px 0;
+  text-align: center;
+  color: #94a3b8;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 32px 24px;
+  }
+
+  .side {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding-top: 0;
+  }
+}
